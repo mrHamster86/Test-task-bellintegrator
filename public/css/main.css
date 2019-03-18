@@ -1,0 +1,91 @@
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.order {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.order__submit {
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+
+.select {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.select__item {
+  margin-right: 30px;
+}
+
+.select__form {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.select__item ~ .select__item::before {
+  content: '\2192';
+  margin-right: 30px;
+}
+
+.place__conteiner {
+  display: flex;
+  height: 40px;
+}
+
+.place__row-title {
+  display: block;
+  flex-basis: 100px;
+  align-self: center;
+}
+
+.place__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.place__item {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  display: flex;
+}
+
+.place__label {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 5px;
+  border: 2px solid green;
+  color: green;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.place__label--disabled {
+  border-color: lightgrey;
+  color: lightgrey;
+  cursor: default;
+}
+
+.place__item input:checked ~ .place__label {
+  color: red;
+  border-color: red;
+}
